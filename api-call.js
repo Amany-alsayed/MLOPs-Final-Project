@@ -5,9 +5,9 @@ async function getPredictedLabel(processed_t) {
     //console.log("Is processed_t flat?", processed_t);
     processed_t = processed_t.flatMap(point => [point.x, point.y, point.z]);
     //console.log("Is processed_t an array?", Array.isArray(processed_t));
-    //console.log("Is processed_t flat?", processed_t.every(Number.isFinite)); // should be true after flatten
+    //console.log("Is processed_t flat?", processed_t.every(Number.isFinite));  
     //console.log("Is processed_t flat?", processed_t);
-    const response = await fetch("http://localhost:8000/predict", {
+    const response = await fetch("http://107.21.70.23/predict", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
